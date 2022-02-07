@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GosAutoInspection.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="900"
       Title="Добавление водителя">
 
     <Grid>
@@ -67,6 +67,27 @@
                            Style="{StaticResource mainTxtb}"
                            Width="130"/>
                 <TextBox Name="TxtJobName"
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Телефон:"
+                           Style="{StaticResource mainTxtb}"
+                           Width="130"/>
+                <TextBox Name="TxtPhone"
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Email:"
+                           Style="{StaticResource mainTxtb}"
+                           Width="130"/>
+                <TextBox Name="TxtEmail"
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Фотография:"
+                           Style="{StaticResource mainTxtb}"
+                           Width="130"/>
+                <TextBox Name="TxtPhoto"
                          Style="{StaticResource mainTxt}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal"

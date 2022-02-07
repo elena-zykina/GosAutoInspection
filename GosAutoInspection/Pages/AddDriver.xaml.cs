@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GosAutoInspection.DataBase;
 
 namespace GosAutoInspection.Pages
 {
@@ -23,6 +24,31 @@ namespace GosAutoInspection.Pages
         public AddDriver()
         {
             InitializeComponent();
+        }
+
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Drivers driver = new Drivers()
+                {
+                    Title = TxtName.Text,
+                    MaterialType = MaterialTypeCombo.SelectedItem as MaterialType,
+                    Description = TxtDescription.Text,
+                    Image = TxtImage.Text,
+                    MinCount = Convert.ToInt32(TxtMinCount.Text),
+                    CountInStock = Convert.ToInt32(TxtCountInStock.Text),
+
+                };
+                Transition.Context.Material.Add(material);
+                Transition.Context.SaveChanges();
+                MessageBox.Show("Данные успешно добавлены", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message.ToString());
+            }
+            Transition.MainFrame.GoBack();
         }
     }
 }
