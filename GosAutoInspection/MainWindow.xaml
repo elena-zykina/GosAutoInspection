@@ -1,0 +1,31 @@
+﻿<Window x:Class="GosAutoInspection.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GosAutoInspection"
+        mc:Ignorable="d"
+        Title="ГосАвтоИнспекция" Height="700" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="200*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" 
+                    Background="#b5d5ca"
+                    Orientation="Horizontal">
+            <TextBlock
+                Style="{StaticResource mainTxtb}"
+                Width="300"
+                FontSize="30"
+                TextAlignment="Center"
+                Margin="300 0 0 0 "
+                Text="ГосАвтоИнспекция"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Background="#d1eefc">
+            
+        </StackPanel>
+        <Frame x:Name="FrmMain" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
