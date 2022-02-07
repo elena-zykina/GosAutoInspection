@@ -32,15 +32,11 @@ namespace GosAutoInspection.Pages
             {
                 Drivers driver = new Drivers()
                 {
-                    Title = TxtName.Text,
-                    MaterialType = MaterialTypeCombo.SelectedItem as MaterialType,
-                    Description = TxtDescription.Text,
-                    Image = TxtImage.Text,
-                    MinCount = Convert.ToInt32(TxtMinCount.Text),
-                    CountInStock = Convert.ToInt32(TxtCountInStock.Text),
+                    Name = TxtName.Text,
+
 
                 };
-                Transition.Context.Material.Add(material);
+                Transition.Context.Drivers.Add(driver);
                 Transition.Context.SaveChanges();
                 MessageBox.Show("Данные успешно добавлены", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }
