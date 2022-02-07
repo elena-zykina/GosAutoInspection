@@ -33,6 +33,8 @@ namespace GosAutoInspection.Pages
                 Drivers driver = new Drivers()
                 {
                     Name = TxtName.Text,
+                    Surname = TxtSurname.Text,
+                    MiddleName = TxtMiddleName.Text,
 
 
                 };
