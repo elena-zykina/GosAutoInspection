@@ -1,0 +1,81 @@
+﻿<Page x:Class="GosAutoInspection.Pages.AddDriver"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GosAutoInspection.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Добавление водителя">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Vertical" Height="auto" Width="auto">
+            <StackPanel Orientation="Horizontal"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Фамилия:"
+                           Style="{StaticResource mainTxtb}"
+                           Width="130"/>
+                <TextBox Name="TxtSurname"
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Имя:"
+                           Style="{StaticResource mainTxtb}"
+                           Width="130"/>
+                <TextBox Name="TxtName"
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Отчество:"
+                           Style="{StaticResource mainTxtb}"
+                           Width="130"/>
+                <TextBox Name="TxtMiddleName"
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Паспорт (серия):"
+                           Style="{StaticResource mainTxtb}"
+                           Width="130"/>
+                <TextBox Name="TxtPassportSerial"
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Паспорт (номер):"
+                           Style="{StaticResource mainTxtb}"
+                           Width="130"/>
+                <TextBox Name="TxtPassportNumber"
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Адрес:"
+                           Style="{StaticResource mainTxtb}"
+                           Width="130"/>
+                <TextBox Name="TxtAddress"
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Место работы:"
+                           Style="{StaticResource mainTxtb}"
+                           Width="130"/>
+                <TextBox Name="TxtCompany"
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Должность:"
+                           Style="{StaticResource mainTxtb}"
+                           Width="130"/>
+                <TextBox Name="TxtJobName"
+                         Style="{StaticResource mainTxt}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <Button Name="BtnSave"
+                    Click="BtnSave_Click"
+                    Style="{StaticResource mainBtn}"
+                    Content="Сохранить"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
