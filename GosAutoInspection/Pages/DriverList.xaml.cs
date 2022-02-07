@@ -34,7 +34,7 @@ namespace GosAutoInspection.Pages
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            Transition.MainFrame.Navigate(new AddDriver());
         }
 
         private void DltBtn_Click(object sender, RoutedEventArgs e)
