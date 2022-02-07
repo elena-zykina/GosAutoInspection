@@ -18,7 +18,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="#d1eefc" BorderThickness="4">
-                        <Grid Height="190" Width="600" >
+                        <Grid Height="190" Width="700" >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="150"/>
                                     <ColumnDefinition Width="*"/>
@@ -30,8 +30,11 @@
                                     <TextBlock Text="{Binding Name, StringFormat={} {0}}" FontSize="15"/>
                                     <TextBlock Text="{Binding MiddleName, StringFormat={} {0}}" FontSize="15"/>
                                 </StackPanel>
-                                <TextBlock Text="{Binding PassportNumber, StringFormat={} Паспортные данные: {0}}" FontSize="15" Margin="4"/>
-                                <TextBlock Text="{Binding Address, StringFormat={} Адрес регистрации: {0}}" FontSize="15" Margin="4"/>
+                                <StackPanel Orientation="Horizontal" Margin="4">
+                                    <TextBlock Text="{Binding PassportSerial, StringFormat={} Паспортные данные: {0}}" FontSize="15" Margin="4"/>
+                                    <TextBlock Text="{Binding PassportNumber, StringFormat={}}" FontSize="15" Margin="4"/>
+                                </StackPanel>
+                                <TextBlock Text="{Binding Address, StringFormat={} Адрес: {0}}" FontSize="15" Margin="4"/>
                                 <TextBlock Text="{Binding Company, StringFormat={} Компания: {0}}" FontSize="15" Margin="4"/>
                                 <StackPanel Orientation="Horizontal" Margin="4">
                                     <TextBlock Text="{Binding Phone, StringFormat={} Телефон: {0}}" FontSize="15" ></TextBlock>
